@@ -23,14 +23,36 @@ a {
 hr {
     border: 0;
     border-top: 1px dotted #efefef;
-  }
+}
   
-  img {
+img {
     max-width: 100%;
-  }
+}
  
-  h1 {
-    a {
-      color: red;
-    }
-  }
+// theme colours
+$primary:   #326dee;
+$secondary: #1ac888;
+$error:     #d32752;
+$info:      #f6c31c;
+
+h1 {
+  color: $primary;
+}
+a {
+  color: $secondary;
+}
+button {
+  color: white;
+  border: 0;
+  background: $primary;
+}
+.error {
+  color: $error;
+  border-color: $error;
+  border-style: solid;
+}
+.notification {
+  color: $secondary;
+  border-color: $secondary;
+  border-style: solid;
+}

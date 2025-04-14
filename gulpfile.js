@@ -1,6 +1,7 @@
 const { src, dest, watch, series } = require('gulp');
 const sass = require('gulp-sass')(require('sass'));
 
+// functions 
 function buildStyles() {
   return src('index.scss')
     .pipe(sass())
