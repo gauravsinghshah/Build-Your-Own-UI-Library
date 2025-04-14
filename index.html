@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MythicalUI – Lightweight CSS Framework</title>
+  <link rel="stylesheet" href="css/index.css" />
+
+</head>
+<body>
+  <!-- Navbar -->
+  <nav class="navbar-primary  text-white p-2">
+    <div class="container flex justify-between items-center">
+      <h1 class="site-title">MythicalUI</h1>
+      <div class="nav-links">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('components')">Components</a>
+        <a href="#" onclick="showSection('utilities')">Utilities</a>
+        <a href="#" onclick="showSection('grid')">Grid</a>
+        <a href="#" onclick="showSection('fonts')">Fonts</a>
+        <a href="#" onclick="showSection('colors')">Colors</a>
+        <button id="darkModeToggle">🌓</button>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Sections -->
+  <main>
+    <!-- Home -->
+    <section id="home" class="container section mt-4">
+      <h2 class="mt-2 mb-2">Welcome to MythicalUI</h2>
+    <p>A utility-first CSS framework built for simplicity and speed.</p><br>
+
+    <ul>
+      <li>🛠 <strong>Utility-First</strong> – Apply styles directly in your HTML</li>
+      <li>💨 <strong>Fast</strong> – Small CSS footprint</li>
+      <li>🎨 <strong>Customizable</strong> – Built with SASS variables</li>
+      <li>🌘 <strong>Dark Mode</strong> – Easily toggle between light and dark themes</li>
+      <li>📦 <strong>Component Library</strong> – Pre-built UI components for rapid development</li>
+      <li>🔁 <strong>Responsive</strong> – Mobile-first and works on all screen sizes</li>
+      <li>📚 <strong>Documentation</strong> – Simple and developer-focused guides</li>
+      <li>⚡ <strong>Minimal Setup</strong> – Works out of the box with SCSS</li>
+    </ul>
+
+
+    <h3 class="mt-3 mb-1">✨ Getting Started</h3>
+    <p>To get started quickly:</p>
+    <ol>
+      <li>Install using NPM: <code>npm install mythical-ui</code></li>
+      <li>Import the SCSS: <code>@use 'mythical-ui'</code></li>
+      <li>Start building your UI!</li>
+    </ol>
+
+
+    <h3 class="mb-1 mt-3">📌 Example Components</h3>
+    <p>Here are a few components you can use right away:</p>
+    <div class="mt-2">
+      <span class="badge badge-primary">Primary</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-danger">Danger</span>
+    </div>
+
+    <h3 class="mb-1 mt-3">🌐 Join Our Community</h3>
+    <p>Stay updated, ask questions, and contribute:</p>
+    <ul>
+      <li>💬 <a href="#">Join us on Discord</a></li>
+      <li>⭐ <a href="#">Star us on GitHub</a></li>
+      <li>📢 <a href="#">Follow us on Twitter</a></li>
+    </ul>
+
+    </section>
+
+    <!-- Components -->
+    <section id="components" class="container section mt-4" style="display:none;">
+      <h2 class="mt-2">Components</h2>
+
+      <h2 class="mt-2 mb-2">Cards</h2>
+      <div class="card">
+        <h1 class="card-title">This is a title</h1>
+        <p class="card-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio? Lorem ipsum, dolor sit amet consectetur <a href="">adipisicing elit</a>. Libero laboriosam laborum exercitationem autem commodi voluptas odio aliquid ut velit doloremque minima, quaerat dolores, corporis consequuntur totam nam id veniam maxime.</p>
+      </div>
+      
+      <!-- Button  -->
+
+      <h2 class="mt-3 mb-2">Buttons</h2>
+      <a href="#" class="btn">default btn</a>
+      <a href="#" class="btn-primary text-white">click me</a>
+      <a href="#" class="btn-secondary text-white">click me</a>
+      <a href="#" class="btn-error text-white">click me</a>
+      <a href="#" class="btn-info">click me</a>
+      <a href="#" class="btn-outlined-purple text-purple text-hover-white">click me</a>
+      <a href="#" class="btn-outlined-orange text-orange text-hover-white">click me</a>
+      <a href="#" class="btn-complement-purple">click me</a>
+      <a href="#" class="btn-complement-primary">click me</a>
+
+      <!-- Badges  -->
+      <h2 class="mt-3 mb-2">Badges</h2>
+      <span class="badge">Default Info</span>
+      <span class="badge badge-primary">Primary</span>
+      <span class="badge badge-success">Success</span>
+      <span class="badge badge-warning">Warning</span>
+      <span class="badge badge-danger">Danger</span>
+
+    </section>
+
+    <!-- Utilities -->
+    <section id="utilities" class="container section mt-4" style="display:none;">
+      <h2 class="mt-2">Utilities</h2>
+      <div class="mt-2 text-orange-dark-2 bg-orange-light-5 p-2 br-xs">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perspiciatis!</p>
+      </div>
+      <div class="mt-2 text-secondary-dark-2 bg-secondary-light-5 p-2 br-lg">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perspiciatis!</p>
+      </div>
+
+      <h2 class="mt-3">Opacity</h2>
+      <div class="display-i-b bg-purple text-white o-10 mt-3 mr-3 p-2">opacity 10</div>
+      <div class="display-i-b bg-purple text-white o-30 mt-3 mr-3 p-2">opacity 30</div>
+      <div class="display-i-b bg-purple text-white o-50 mt-3 mr-3 p-2">opacity 50</div>
+      <div class="display-i-b bg-purple text-white o-70 mt-3 mr-3 p-2">opacity 70</div>
+      <div class="display-i-b bg-purple text-white o-90 mt-3 mr-3 p-2">opacity 90</div>
+  
+      <hr class="mt-4 mb-4">
+    </section>
+
+    <!-- Grid -->
+    <section id="grid" class="container section mt-4" style="display:none;">
+      <h2 class="mb-2 mt-2">Grid System</h2>
+      <div class="row gap-2 justify-center">
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+        <div class="col-12-xs col-5-sm col-3-xl">
+          <div class="card">
+            <h3 class="card-title">Hello, ninjas</h3>
+            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+          </div>
+        </div>
+
+        <div class="col-12-xs col-5-sm col-3-xl">
+         
+      </div>
+  
+    </section>
+
+    <!-- Fonts -->
+    <section id="fonts" class="container section mt-4" style="display:none;">
+      <h2 class="mb-2 mt-2">Font Sizes</h2>
+      <div class="font-sm">this is small font</div>
+      <div class="font-md">this is medium font</div>
+      <div class="font-lg">this is large font</div>
+      <div class="font-xl">this is extra large font</div>
+      <div class="font-xxl">this is extra, extra large font</div>
+      
+      <!-- text  -->
+      <h2 class="mb-2 mt-3">Text Utilities</h2>
+
+      <p class="font-bold">This text is bold.</p><br>
+      <p class="font-light">This text is light.</p><br>
+      <p class="italic">This text is italic.</p><br>
+      <p class="underline">This text is underlined.</p><br>
+
+      <p class="text-center bg-gray-light-4 p-1">This text is centered.</p>
+      <p class="text-right bg-gray-light-4 p-1">This text is right aligned.</p>
+     
+      <br>
+      <p class="uppercase">this will be uppercase</p><br>
+      <p class="lowercase">THIS WILL BE LOWERCASE</p><br>
+      <p class="capitalize">this text will be capitalized</p>
+
+    </section>
+
+    <!-- colors  -->
+    <section id="colors" class="container section mt-4" style="display:none;">
+      <h2 class="mt-2 mb-2">Colors</h2>
+
+      <span class="text-primary">primary text</span> | 
+      <span class="text-secondary">secondary text</span> | 
+      <span class="text-error">error text</span> | 
+      <span class="text-info">info text</span> | 
+      <span class="text-blue">blue text</span> | 
+      <span class="text-red">red text</span> |
+      <span class="text-green">green text</span> | 
+      <span class="text-yellow">yellow text</span> | 
+      <span class="text-purple">purple text</span> | 
+      <span class="text-orange">orange text</span> | 
+      <span class="text-gray">gray text</span>
+
+      <br><br>
+
+      <span class="bg-primary text-white">bg primary</span> |
+      <span class="bg-secondary text-white">bg secondary</span> |
+      <span class="bg-error text-white">bg error</span> |
+      <span class="bg-info text-white">bg info</span> |
+      <span class="bg-blue text-white">bg blue</span> |
+      <span class="bg-red text-white">bg red</span> |
+      <span class="bg-green text-white">bg green</span> |
+      <span class="bg-yellow text-white">bg yellow</span> |
+      <span class="bg-purple text-white">bg purple</span> |
+      <span class="bg-orange text-white">bg orange</span> |
+      <span class="bg-gray text-white">bg gray</span> |
+
+      <br><br>
+
+      <span class="bg-primary-dark-8 text-white">primary dark 8</span> |
+      <span class="bg-primary-dark-6 text-white">primary dark 6</span> |
+      <span class="bg-primary-dark-4 text-white">primary dark 4</span> |
+      <span class="bg-primary-dark-2 text-white">primary dark 2</span> |
+      <span class="bg-primary text-white">primary</span> |
+      <span class="bg-primary-light-2 text-white">primary light 2</span> |
+      <span class="bg-primary-light-4 text-white">primary light 4</span> |
+      <span class="bg-primary-light-6 text-white">primary light 6</span> |
+      <span class="bg-primary-light-8 text-white">primary light 8</span> |
+
+      <br><br>
+      <a href="#" class="text-primary text-hover-orange-light-1">hover me</a>
+
+    </section>
+  </main>
+  <!-- Footer -->
+  <footer id="footer" class="p-4 mt-4 text-center">
+    <p>© 2025 MythicalUI – Built with ❤️</p>
+  </footer>
+
+  <!-- JavaScript -->
+  <script>
+    const sections = document.querySelectorAll('.section');
+    const darkToggle = document.getElementById('darkModeToggle');
+
+    function showSection(id) {
+      sections.forEach(section => {
+        section.style.display = section.id === id ? 'block' : 'none';
+      });
+    }
+
+    // Dark Mode
+    darkToggle.addEventListener('click', () => {
+      document.body.classList.toggle('dark');
+    });
+
+  </script>
+</body>
+</html>
+
+<style> 
+  html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+  }
+  body.dark {
+    background-color: #1a1a1a;
+    color: white;
+  }
+  main {
+    flex: 1;
+  }
+  nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+  }
+  footer {
+    margin-top: auto;
+    background-color: #326dee;
+    color: white;
+    text-align: center;
+    padding: 20px;
+  }
+</style>

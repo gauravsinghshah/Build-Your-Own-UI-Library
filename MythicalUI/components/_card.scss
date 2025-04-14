@@ -1,0 +1,23 @@
+@use '../variables'; // Adjust the path based on your file structure
+@use 'sass:math';
+
+.card {
+  display: block;
+  padding: variables.$base-padding; // Use the variable with the namespace
+  border: variables.$base-border-thickness solid #ddd;
+  box-shadow: variables.$base-box-shadow;
+  border-radius: math.div(variables.$base-border-radius, 4);
+
+  .card-title {
+    font-size: variables.$base-font-size;
+    padding-bottom: variables.$base-padding;
+    font-weight: bold;
+  }
+  .card-body {
+    font-size: variables.$base-font-size;
+
+    a {
+      text-decoration: underline;
+    }
+  }
+}

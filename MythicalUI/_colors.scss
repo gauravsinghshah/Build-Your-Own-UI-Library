@@ -1,0 +1,47 @@
+@use 'sass:color'; // Import the color module
+@use 'variables'; // Ensure this is imported
+
+@each $key, $val in variables.$colors { // Use variables.$colors
+  .text-#{$key} {
+    color: $val;
+  }
+  .text-hover-#{$key} {
+    &:hover {
+      color: $val;
+    }
+  }
+  .bg-#{$key} {
+    background-color: $val;
+  }
+  @if ($val != black and $val != white) {
+    // Light variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-light-#{$i} {
+        color: color.mix(white, $val, $i * 10%); // Use color.mix and add unit
+      }
+      .text-hover-#{$key}-light-#{$i} {
+        &:hover {
+          color: color.mix(white, $val, $i * 10%); // Use color.mix and add unit
+        }
+      }
+      .bg-#{$key}-light-#{$i} {
+        background-color: color.mix(white, $val, $i * 10%); // Use color.mix and add unit
+      }
+    }
+
+    // Dark variations
+    @for $i from 1 through 9 {
+      .text-#{$key}-dark-#{$i} {
+        color: color.mix(black, $val, $i * 10%); // Use color.mix and add unit
+      }
+      .text-hover-#{$key}-dark-#{$i} {
+        &:hover {
+          color: color.mix(black, $val, $i * 10%); // Use color.mix and add unit
+        }
+      }
+      .bg-#{$key}-dark-#{$i} {
+        background-color: color.mix(black, $val, $i * 10%); // Use color.mix and add unit
+      }
+    }
+  }
+}

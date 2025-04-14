@@ -1,0 +1,40 @@
+@use '../variables'; // Adjust the path based on your file structure
+@use 'sass:color'; // Import the color module
+
+@mixin btn($bg-color: #e2e2e2) {
+  text-decoration: none;
+  cursor: pointer;
+  display: inline-block;
+  border: 0;
+  padding: variables.$base-padding variables.$base-padding * 2; // Use the variable with the namespace
+  border-radius: variables.$base-border-radius; // Use the variable with the namespace
+  background-color: $bg-color;
+}
+
+.btn {
+  @include btn;
+}
+
+@each $key, $val in variables.$colors { // Use the variable with the namespace
+  .btn-#{$key} {
+    @include btn($val);
+    &:hover {
+      background-color: color.adjust($val, $lightness: 5%); // Use color.adjust
+    }
+  }
+  .btn-outlined-#{$key} {
+    @include btn(#fff);
+    border: variables.$base-border-thickness solid $val; // Use the variable with the namespace
+    &:hover {
+      background-color: $val;
+    }
+  }
+  .btn-complement-#{$key} {
+    @include btn($val);
+    color: light-comp($val);
+    &:hover {
+      color: $val;
+      background-color: light-comp($val);
+    }
+  }
+}

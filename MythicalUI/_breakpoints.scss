@@ -1,0 +1,45 @@
+@use "sass:map"; // Import the map module
+
+$breakpoints: (
+  "xs": 0,
+  "sm": 480px,
+  "md": 720px,
+  "lg": 960px,
+  "xl": 1200px,
+);
+
+@mixin xs {
+  @media (min-width: map.get($breakpoints, "xs")) { // Use map.get
+    @content;
+  }
+}
+
+@mixin sm {
+  @media (min-width: map.get($breakpoints, "sm")) { // Use map.get
+    @content;
+  }
+}
+
+@mixin md {
+  @media (min-width: map.get($breakpoints, "md")) { // Use map.get
+    @content;
+  }
+}
+
+@mixin lg {
+  @media (min-width: map.get($breakpoints, "lg")) { // Use map.get
+    @content;
+  }
+}
+
+@mixin xl {
+  @media (min-width: map.get($breakpoints, "xl")) { // Use map.get
+    @content;
+  }
+}
+
+@mixin breakpoint($bp: 0) {
+  @media (min-width: $bp) {
+    @content;
+  }
+}

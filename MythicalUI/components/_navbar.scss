@@ -1,0 +1,30 @@
+@use '../variables'; // Adjust the path based on your file structure
+
+%flex-layout {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-sizing: border-box;
+}
+
+.navbar {
+  @extend %flex-layout;
+  padding: variables.$base-padding variables.$base-padding * 2; // Use the variable with the namespace
+  box-shadow: variables.$base-box-shadow; // Use the variable with the namespace
+
+  .site-title {
+    font-size: variables.$font-size-lg; // Use the variable with the namespace
+  }
+
+  .container {
+    @extend %flex-layout;
+  }
+}
+
+@each $key, $val in variables.$colors { // Use the variable with the namespace
+  .navbar-#{$key} {
+    @extend .navbar;
+    background-color: $val; // Set the background color
+  }
+}
