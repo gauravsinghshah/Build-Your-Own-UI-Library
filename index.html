@@ -9,7 +9,7 @@
 </head>
 <body>
   <!-- Navbar -->
-  <nav class="navbar-primary  text-white p-2">
+  <nav class="navbar-primary text-white p-2">
     <div class="container flex justify-between items-center">
       <h1 class="site-title">MythicalUI</h1>
       <div class="nav-links">
@@ -26,50 +26,56 @@
 
   <!-- Sections -->
   <main>
+
     <!-- Home -->
-    <section id="home" class="container section mt-4">
-      <h2 class="mt-2 mb-2">Welcome to MythicalUI</h2>
-    <p>A utility-first CSS framework built for simplicity and speed.</p><br>
+    <section id="home" class="container section text-center p-4 mt-2 br">
 
-    <ul>
-      <li>🛠 <strong>Utility-First</strong> – Apply styles directly in your HTML</li>
-      <li>💨 <strong>Fast</strong> – Small CSS footprint</li>
-      <li>🎨 <strong>Customizable</strong> – Built with SASS variables</li>
-      <li>🌘 <strong>Dark Mode</strong> – Easily toggle between light and dark themes</li>
-      <li>📦 <strong>Component Library</strong> – Pre-built UI components for rapid development</li>
-      <li>🔁 <strong>Responsive</strong> – Mobile-first and works on all screen sizes</li>
-      <li>📚 <strong>Documentation</strong> – Simple and developer-focused guides</li>
-      <li>⚡ <strong>Minimal Setup</strong> – Works out of the box with SCSS</li>
-    </ul>
+      <div class="p-3 br shadow text-center">
+        <div class="mt-1 mb-2">
+          <img src="logo.png" alt="Framework Logo" width="250" class="br" />
+        </div>
+        <p class="font-md font-xl mb-2">
+          The lightweight, utility-first CSS framework for rapid and elegant web development.
+        </p>
 
+        <p class="font-md text-gray mb-4">
+        "MythicalUI is a powerful, extensible, and modern frontend framework. Build sleek, responsive interfaces with our utility-first classes, modular components, and Sass-powered customization. Bring your ideas to life faster with lightweight plugins and a flexible grid system."
+        </p>
+        
+        <h3>Install via package manager</h3>
 
-    <h3 class="mt-3 mb-1">✨ Getting Started</h3>
-    <p>To get started quickly:</p>
-    <ol>
-      <li>Install using NPM: <code>npm install mythical-ui</code></li>
-      <li>Import the SCSS: <code>@use 'mythical-ui'</code></li>
-      <li>Start building your UI!</li>
-    </ol>
-
-
-    <h3 class="mb-1 mt-3">📌 Example Components</h3>
-    <p>Here are a few components you can use right away:</p>
-    <div class="mt-2">
-      <span class="badge badge-primary">Primary</span>
-      <span class="badge badge-success">Success</span>
-      <span class="badge badge-warning">Warning</span>
-      <span class="badge badge-danger">Danger</span>
-    </div>
-
-    <h3 class="mb-1 mt-3">🌐 Join Our Community</h3>
-    <p>Stay updated, ask questions, and contribute:</p>
-    <ul>
-      <li>💬 <a href="#">Join us on Discord</a></li>
-      <li>⭐ <a href="#">Star us on GitHub</a></li>
-      <li>📢 <a href="#">Follow us on Twitter</a></li>
-    </ul>
-
+        <div class="terminal-wrapper-container">
+          <div class="terminal-wrapper">
+            <div class="terminal-box">
+              <div class="terminal-header">Terminal</div>
+              <div class="terminal-content">
+                <pre><code><span class="cmd">npm</span> <span class="arg">install</span> </span></code></pre>
+              </div>
+            </div>
+          </div>
+        
+          <div class="terminal-wrapper">
+            <div class="terminal-box">
+              <div class="terminal-header">Terminal</div>
+              <div class="terminal-content">
+                <span class="cmd">npm</span> <span class="arg">i</span> <span class="arg">mythicalui</span>
+              </div>
+            </div>
+          </div>
+        
+          <h3 class="mt-2">Import mythicalui</h3>
+          <div class="terminal-wrapper">
+            <div class="terminal-box">
+              <div class="terminal-content">
+                <span class="arg">&lt;link rel="stylesheet" href="node_modules/mythicalui/css/index.css" /&gt;</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        
     </section>
+        
+
 
     <!-- Components -->
     <section id="components" class="container section mt-4" style="display:none;">
@@ -104,10 +110,6 @@
 
     </section>
 
-
-
-
-    
     <!-- Utilities -->
     <section id="utilities" class="container section mt-4" style="display:none;">
       <h2 class="mt-2">Utilities</h2>
@@ -264,6 +266,7 @@
   <!-- Footer -->
   <footer id="footer" class="p-4 mt-4 text-center">
     <p>© 2025 MythicalUI – Built with ❤️</p>
+    <a target="_blank" href=https://github.com/gauravsinghshah/Mythical-UI>Github</a>
   </footer>
 
   <!-- JavaScript -->
@@ -314,6 +317,54 @@
     padding: 20px;
   }
 
+  /* Centering the container */
+.terminal-wrapper-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+/* Styling for the terminal wrapper */
+.terminal-wrapper {
+  background-color: #0a0a0a;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  width: 90%;
+  max-width: 600px;
+  overflow: hidden;
+}
+
+.terminal-box {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 0.5rem;
+  border-radius: 12px;
+}
+
+.terminal-header {
+  font-size: 12px;
+  color: rgba(255, 255, 255, 0.5);
+  padding: 0.25rem 1rem;
+}
+
+.terminal-content {
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1rem;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-size: 14px;
+}
+
+.cmd {
+  color: #f472b6; /* pink */
+}
+
+.arg {
+  color: #7dd3fc; /* sky */
+}
 
   
 </style>
