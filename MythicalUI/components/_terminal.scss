@@ -1,0 +1,47 @@
+.terminal-wrapper-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 1rem;
+    margin-top: 2rem;
+  
+    .terminal-wrapper {
+      background-color: #0a0a0a;
+      border-radius: 12px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+      width: 90%;
+      max-width: 600px;
+      overflow: hidden;
+  
+      .terminal-box {
+        background-color: rgba(255, 255, 255, 0.03);
+        padding: 0.5rem;
+        border-radius: 12px;
+  
+        .terminal-header {
+          font-size: 12px;
+          color: rgba(255, 255, 255, 0.5);
+          padding: 0.25rem 1rem;
+        }
+  
+        .terminal-content {
+          background-color: rgba(255, 255, 255, 0.05);
+          padding: 1rem;
+          border-radius: 8px;
+          overflow-x: auto;
+          font-size: 14px;
+  
+          .cmd {
+            color: #f472b6; // pink
+          }
+  
+          .arg {
+            color: #7dd3fc; // sky
+          }
+        }
+      }
+    }
+  }
+  
