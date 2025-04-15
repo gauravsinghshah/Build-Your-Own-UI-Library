@@ -1,4 +1,4 @@
-# Build-Your-Own-UI-Library
+# Mythical-UI-Library
 
 YourUI is a modern CSS utility framework built from scratch to empower developers with the tools they need to create **beautiful**, **responsive**, and **accessible** interfaces. This library redefines what a UI framework can be—balancing **visual sophistication** with **functional precision**.
 
