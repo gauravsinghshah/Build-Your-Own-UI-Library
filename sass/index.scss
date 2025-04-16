@@ -1,8 +1,12 @@
-// customize theme variables
+// Customize theme variables
 $secondary: indigo;
 $base-padding: 1rem;
 $base-border-thickness: 3px;
 
-
-
-@use 'MythicalUI'; 
+// Import mythical UI and your terminal styles
+@use 'MythicalUI';
+@use '../mythicalui/components/terminal';
+@use '../mythicalui/components/pagination';
+@use '../mythicalui/components/table';
+@use '../mythicalui/code';
+@use '../mythicalui/layout';
