@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>MythicalUI – Lightweight CSS Framework</title>
+  <title>MythicalUI Lightweight CSS Framework</title>
   <link rel="stylesheet" href="css/index.css" />
   <link rel="stylesheet" href="css/extra.css" />
 
@@ -17,10 +17,9 @@
         <a href="#" onclick="showSection('home')">Home</a>
         <a href="#" onclick="showSection('components')">Components</a>
         <a href="#" onclick="showSection('utilities')">Utilities</a>
-        <a href="#" onclick="showSection('grid')">Grid</a>
-        <a href="#" onclick="showSection('fonts')">Fonts</a>
-        <a href="#" onclick="showSection('colors')">Colors</a>
-        <button id="darkModeToggle">🌓</button>
+        <a href="#" onclick="showSection('layout')">Layout</a>
+        <button class="br" id="darkModeToggle"><img src="brightness-and-contrast.png" alt="Light Mode" width="18" />
+        </button>
       </div>
     </div>
   </nav>
@@ -31,16 +30,16 @@
     <!-- Home -->
     <section id="home" class="container section text-center p-4 mt-2 br">
 
-      <div class="p-3 br shadow text-center">
+      <div class="p-3 ">
         <div class="mt-1 mb-2">
-          <img src="logo.png" alt="Framework Logo" width="250" class="br" />
+          <img src="logo.png" alt="Framework Logo" width="250" />
         </div>
         <p class="font-md font-xl mb-2">
           The lightweight, utility-first CSS framework for rapid and elegant web development.
         </p>
 
         <p class="font-md text-gray mb-4">
-        "MythicalUI is a powerful, extensible, and modern frontend framework. Build sleek, responsive interfaces with our utility-first classes, modular components, and Sass-powered customization. Bring your ideas to life faster with lightweight plugins and a flexible grid system."
+        "MythicalUI is a powerful, extensible, and modern frontend framework. Build sleek, responsive interfaces with our utility-first classes, modular components, and Sass-powered customization. "
         </p>
         
         <h3>Install via package manager</h3>
@@ -73,200 +72,667 @@
             </div>
           </div>
         </div>
-        
-    </section>
-        
-
-
-    <!-- Components -->
-    <section id="components" class="container section mt-4" style="display:none;">
-      <h2 class="mt-2">Components</h2>
-
-      <h2 class="mt-2 mb-2">Cards</h2>
-      <div class="card">
-        <h1 class="card-title">This is a title</h1>
-        <p class="card-body">Lorem ipsum dolor sit, amet consectetur adipisicing elit. In sunt, quo totam aliquam praesentium ducimus tempore sapiente quia nulla optio? Lorem ipsum, dolor sit amet consectetur <a href="">adipisicing elit</a>. Libero laboriosam laborum exercitationem autem commodi voluptas odio aliquid ut velit doloremque minima, quaerat dolores, corporis consequuntur totam nam id veniam maxime.</p>
-      </div>
       
-      <!-- Button  -->
-
-      <h2 class="mt-3 mb-2">Buttons</h2>
-      <a href="#" class="btn">default btn</a>
-      <a href="#" class="btn-primary text-white">click me</a>
-      <a href="#" class="btn-secondary text-white">click me</a>
-      <a href="#" class="btn-error text-white">click me</a>
-      <a href="#" class="btn-info">click me</a>
-      <a href="#" class="btn-outlined-purple text-purple text-hover-white">click me</a>
-      <a href="#" class="btn-outlined-orange text-orange text-hover-white">click me</a>
-      <a href="#" class="btn-complement-purple">click me</a>
-      <a href="#" class="btn-complement-primary">click me</a>
-
-      <!-- Badges  -->
-      <h2 class="mt-3 mb-2">Badges</h2>
-      <span class="badge">Default Info</span>
-      <span class="badge badge-primary">Primary</span>
-      <span class="badge badge-success">Success</span>
-      <span class="badge badge-warning">Warning</span>
-      <span class="badge badge-danger">Danger</span>
-
     </section>
 
-    <!-- Utilities -->
+
+   <!-- Components Start -->
+   <section id="components" class="container section mt-4" style="display:none;">
+    <h1 class="mt-2 mb-2">UI Components</h1>
+  
+    <!-- Cards -->
+    <div>
+      <h2 class="mb-2">Cards</h2>
+      <p>Used for containing content and actions about a single subject.</p>
+  
+      <div class="component-preview">
+        <div class="card">
+          <h1 class="card-title">This is a title</h1>
+          <p class="card-body">
+            This is card body
+            <a href="#">Learn more</a>
+          </p>
+        </div>
+  
+        <div class="code-box">
+          <pre><code>
+  &lt;div class="card"&gt;
+    &lt;h1 class="card-title"&gt;This is a title&lt;/h1&gt;
+    &lt;p class="card-body"&gt;
+      This is card body
+      &lt;a href="#"&gt;Learn more&lt;/a&gt;
+    &lt;/p&gt;
+  &lt;/div&gt;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Buttons -->
+    <div class="mt-3">
+      <h2 class="mb-2">Buttons</h2>
+      <p>Use buttons to trigger actions across your UI.</p>
+  
+      <div class="component-preview">
+        <div class="mb-3">
+          <a href="#" class="btn">Default</a>
+          <a href="#" class="btn-primary text-white">Primary</a>
+          <a href="#" class="btn-secondary text-white">Secondary</a>
+          <a href="#" class="btn-error text-white">Error</a>
+          <a href="#" class="btn-info">Info</a>
+          <a href="#" class="btn-outlined-purple text-purple text-hover-white">Purple Outline</a>
+          <a href="#" class="btn-outlined-orange text-orange text-hover-white">Orange Outline</a>
+          <a href="#" class="btn-complement-purple">Complement Purple</a>
+          <a href="#" class="btn-complement-primary">Complement Primary</a>
+        </div>
+  
+        <div class="code-box">
+          <pre><code>
+  &lt;a href="#" class="btn"&gt;Default&lt;/a&gt;
+  &lt;a href="#" class="btn-primary text-white"&gt;Primary&lt;/a&gt;
+  &lt;a href="#" class="btn-secondary text-white"&gt;Secondary&lt;/a&gt;
+  &lt;a href="#" class="btn-error text-white"&gt;Error&lt;/a&gt;
+  &lt;a href="#" class="btn-info"&gt;Info&lt;/a&gt;
+  &lt;a href="#" class="btn-outlined-purple text-purple text-hover-white"&gt;Purple Outline&lt;/a&gt;
+  &lt;a href="#" class="btn-outlined-orange text-orange text-hover-white"&gt;Orange Outline&lt;/a&gt;
+  &lt;a href="#" class="btn-complement-purple"&gt;Complement Purple&lt;/a&gt;
+  &lt;a href="#" class="btn-complement-primary"&gt;Complement Primary&lt;/a&gt;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+  
+    <!-- Badges -->
+    <div class="mt-3">
+      <h2 class="mb-2">Badges</h2>
+      <p>Badges scale to match the size of the immediate parent element.</p>
+  
+      <div class="component-preview">
+        <div class="mb-3">
+          <span class="badge">Default</span>
+          <span class="badge badge-primary">Primary</span>
+          <span class="badge badge-success">Success</span>
+          <span class="badge badge-warning">Warning</span>
+          <span class="badge badge-danger">Danger</span>
+        </div>
+  
+        <div class="code-box">
+          <pre><code class="language-html">
+  &lt;span class="badge"&gt;Default&lt;/span&gt;
+  &lt;span class="badge badge-primary"&gt;Primary&lt;/span&gt;
+  &lt;span class="badge badge-success"&gt;Success&lt;/span&gt;
+  &lt;span class="badge badge-warning"&gt;Warning&lt;/span&gt;
+  &lt;span class="badge badge-danger"&gt;Danger&lt;/span&gt;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+
+<!-- Pagination -->
+<div class="mt-3">
+  <h2 class="mb-2">Pagination</h2>
+  <p>Use pagination to navigate between pages of content.</p>
+
+  <div class="component-preview">
+    <div class="mb-3">
+      <ul class="pagination">
+        <li><a href="#" class="disabled">&laquo;</a></li>
+        <li><a href="#">1</a></li>
+        <li><a href="#" class="active">2</a></li>
+        <li><a href="#">3</a></li>
+        <li><a href="#">4</a></li>
+        <li><a href="#">&raquo;</a></li>
+      </ul>
+    </div>
+
+    <div class="code-box">
+      <pre><code class="language-html">
+&lt;ul class="pagination"&gt;
+  &lt;li&gt;&lt;a href="#" class="disabled"&gt;&laquo;&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;1&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#" class="active"&gt;2&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;3&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;4&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&raquo;&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+      </code></pre>
+    </div>
+  </div>
+</div>
+
+  </section>
+   <!-- Components Over -->
+
+
+    <!-- Utilities Start-->
     <section id="utilities" class="container section mt-4" style="display:none;">
-      <h2 class="mt-2">Utilities</h2>
-      <div class="mt-2 text-orange-dark-2 bg-orange-light-5 p-2 br-xs">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perspiciatis!</p>
+      <h1 class="mt-2 mb-2">Utilities</h1>
+    
+      <!-- Background Colors -->
+      <div>
+        <h2 class="mb-2">Background Colors</h2>
+        <p>Use <code>bg-*</code> utility classes to set background color.</p>
+    
+        <div class="component-preview">
+          <div class="mt-2 bg-orange p-2 text-white ">Orange</div>
+          <div class="mt-2 bg-purple p-2 text-white ">Purple</div>
+          <div class="mt-2 bg-blue p-2 text-white ">Blue</div>
+          <div class="mt-2 bg-red p-2 text-white ">Red</div>
+          <div class="mt-2 bg-yellow p-2 text-white ">Yellow</div>
+        
+    
+        <div class="code-box mt-3">
+          <pre><code class="language-html">
+&lt;div class="bg-orange p-2 text-white"&gt;Orange&lt;/div&gt;
+&lt;div class="bg-purple p-2 text-white"&gt;Purple&lt;/div&gt;
+&lt;div class="bg-teal p-2 text-white"&gt;Blue&lt;/div&gt;
+&lt;div class="bg-teal p-2 text-white"&gt;Red&lt;/div&gt;
+&lt;div class="bg-teal p-2 text-white"&gt;Yellow&lt;/div&gt;
+          </code></pre>
+        </div>
       </div>
-      <div class="mt-2 text-secondary-dark-2 bg-secondary-light-5 p-2 br-lg">
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, perspiciatis!</p>
-      </div>
+    </div>
+    
+      <!-- Light & Dark Background Colors -->
+      <div class="mt-3">
+        <h3 class="mb-2">Light & Dark Backgrounds</h3>
+        <p>Use <code>bg-*-light-*</code> classes to apply light tints.</p>
+        <p>Use <code>bg-*-dark-*</code> classes to apply dark tints.</p>
+    
+        <div class="component-preview">
+          <div class="mt-2 bg-orange-light-5 p-2">
+            Light orange background
+          </div>
+          <div class="mt-2 bg-purple-light-5 p-2">
+            Light purple background
+          </div>
+          <div class="mt-2 bg-secondary-dark-5 p-2">
+            Dark secondary background
+          </div>
+          <div class="mt-2 bg-orange-dark-5 p-2">
+            Dark orange background
+          </div>
 
-      <h2 class="mt-3">Opacity</h2>
-      <div class="display-i-b bg-purple text-white o-10 mt-3 mr-3 p-2">opacity 10</div>
-      <div class="display-i-b bg-purple text-white o-30 mt-3 mr-3 p-2">opacity 30</div>
-      <div class="display-i-b bg-purple text-white o-50 mt-3 mr-3 p-2">opacity 50</div>
-      <div class="display-i-b bg-purple text-white o-70 mt-3 mr-3 p-2">opacity 70</div>
-      <div class="display-i-b bg-purple text-white o-90 mt-3 mr-3 p-2">opacity 90</div>
+    
+        <div class="code-box mt-3">
+          <pre><code class="language-html">
+&lt;div class="text-orange-dark-2 bg-orange-light-5 p-2"&gt;Light orange background&lt;/div&gt;
+&lt;div class="text-purple-dark-2 bg-purple-light-5 p-2"&gt;Light purple background&lt;/div&gt;
+&lt;div class="text-secondary-dark-2 bg-secondary-light-5 p-2"&gt;Light secondary background&lt;/div&gt;
+          </code></pre>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Text Colors -->
+
+    <h2 class="mb-2 mt-3">Text Color</h2>
+    <p>
+      Use <code>text-[color]</code> utility classes to change the text color. These classes apply semantic or specific color styles to your text elements.
+    </p>
   
-      <hr class="mt-4 mb-4">
-    </section>
-
-    <!-- Grid -->
-    <section id="grid" class="container section mt-4" style="display:none;">
-      <h2 class="mb-2 mt-2">Grid System</h2>
-      <div class="row gap-2 justify-center">
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-        <div class="col-12-xs col-5-sm col-3-xl">
-          <div class="card">
-            <h3 class="card-title">Hello, ninjas</h3>
-            <p class="card-body">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
-          </div>
-        </div>
-
-        <div class="col-12-xs col-5-sm col-3-xl">
-         
-      </div>
+    <div class="component-preview">
   
-    </section>
-
-    <!-- Fonts -->
-    <section id="fonts" class="container section mt-4" style="display:none;">
-      <h2 class="mb-2 mt-2">Font Sizes</h2>
-      <div class="font-sm">this is small font</div>
-      <div class="font-md">this is medium font</div>
-      <div class="font-lg">this is large font</div>
-      <div class="font-xl">this is extra large font</div>
-      <div class="font-xxl">this is extra, extra large font</div>
-      
-      <!-- text  -->
-      <h2 class="mb-2 mt-3">Text Utilities</h2>
-
-      <p class="font-bold">This text is bold.</p><br>
-      <p class="font-light">This text is light.</p><br>
-      <p class="italic">This text is italic.</p><br>
-      <p class="underline">This text is underlined.</p><br>
-
-      <p class="text-center bg-gray-light-4 p-1">This text is centered.</p>
-      <p class="text-right bg-gray-light-4 p-1">This text is right aligned.</p>
-     
-      <br>
-      <p class="uppercase">this will be uppercase</p><br>
-      <p class="lowercase">THIS WILL BE LOWERCASE</p><br>
-      <p class="capitalize">this text will be capitalized</p>
-
-    </section>
-
-    <!-- colors  -->
-    <section id="colors" class="container section mt-4" style="display:none;">
-      <h2 class="mt-2 mb-2">Colors</h2>
-
-      <span class="text-primary">primary text</span> | 
-      <span class="text-secondary">secondary text</span> | 
-      <span class="text-error">error text</span> | 
-      <span class="text-info">info text</span> | 
-      <span class="text-blue">blue text</span> | 
+      <!-- Examples -->
+      <span class="text-primary">primary text</span> |
+      <span class="text-secondary">secondary text</span> |
+      <span class="text-error">error text</span> |
+      <span class="text-info">info text</span> |
+      <span class="text-blue">blue text</span> |
       <span class="text-red">red text</span> |
-      <span class="text-green">green text</span> | 
-      <span class="text-yellow">yellow text</span> | 
-      <span class="text-purple">purple text</span> | 
-      <span class="text-orange">orange text</span> | 
+      <span class="text-green">green text</span> |
+      <span class="text-yellow">yellow text</span> |
+      <span class="text-purple">purple text</span> |
+      <span class="text-orange">orange text</span> |
       <span class="text-gray">gray text</span>
-
+  
       <br><br>
-
-      <span class="bg-primary text-white">bg primary</span> |
-      <span class="bg-secondary text-white">bg secondary</span> |
-      <span class="bg-error text-white">bg error</span> |
-      <span class="bg-info text-white">bg info</span> |
-      <span class="bg-blue text-white">bg blue</span> |
-      <span class="bg-red text-white">bg red</span> |
-      <span class="bg-green text-white">bg green</span> |
-      <span class="bg-yellow text-white">bg yellow</span> |
-      <span class="bg-purple text-white">bg purple</span> |
-      <span class="bg-orange text-white">bg orange</span> |
-      <span class="bg-gray text-white">bg gray</span> |
-
-      <br><br>
-
-      <span class="bg-primary-dark-8 text-white">primary dark 8</span> |
-      <span class="bg-primary-dark-6 text-white">primary dark 6</span> |
-      <span class="bg-primary-dark-4 text-white">primary dark 4</span> |
-      <span class="bg-primary-dark-2 text-white">primary dark 2</span> |
-      <span class="bg-primary text-white">primary</span> |
-      <span class="bg-primary-light-2 text-white">primary light 2</span> |
-      <span class="bg-primary-light-4 text-white">primary light 4</span> |
-      <span class="bg-primary-light-6 text-white">primary light 6</span> |
-      <span class="bg-primary-light-8 text-white">primary light 8</span> |
-
-      <br><br>
+  
+      <!-- Hover example -->
       <a href="#" class="text-primary text-hover-orange-light-1">hover me</a>
+    
+  
+    <div class="code-box mt-2">
+      <pre><code class="language-html">
+  &lt;!-- Text Colors --&gt;
+  &lt;span class="text-primary"&gt;primary text&lt;/span&gt; |
+  &lt;span class="text-secondary"&gt;secondary text&lt;/span&gt; |
+  &lt;span class="text-error"&gt;error text&lt;/span&gt; |
+  &lt;span class="text-info"&gt;info text&lt;/span&gt; |
+  &lt;span class="text-blue"&gt;blue text&lt;/span&gt; |
+  &lt;span class="text-red"&gt;red text&lt;/span&gt; |
+  &lt;span class="text-green"&gt;green text&lt;/span&gt; |
+  &lt;span class="text-yellow"&gt;yellow text&lt;/span&gt; |
+  &lt;span class="text-purple"&gt;purple text&lt;/span&gt; |
+  &lt;span class="text-orange"&gt;orange text&lt;/span&gt; |
+  &lt;span class="text-gray"&gt;gray text&lt;/span&gt;
+  
+  &lt;!-- Text Hover Color --&gt;
+  &lt;a href="#" class="text-primary text-hover-orange-light-1"&gt;hover me&lt;/a&gt;
+      </code></pre>
+    </div>
+  </div>
+    
+      <!-- Dark & Light Text Colors -->
+      <div class="mt-3">
+        <h2 class="mb-2">Dark & Light Text Colors</h2>
+        <p>Use <code>text-*-dark-*</code> classes to apply darker shades to text.</p>
+    
+        <div class="component-preview">
+          <div class="text-orange-dark-2 p-2">text-orange-dark-2</div>
+          <div class="text-purple-dark-2 p-2">text-purple-dark-2</div>
+          <div class="text-secondary-light-2 p-2">text-secondary-light-2</div>
+          <div class="text-purple-light-2 p-2">text-purple-light-2</div>
+        
+    
+        <div class="code-box">
+          <pre><code class="language-html">
+&lt;div class="text-orange-dark-2"&gt;text-orange-dark-2&lt;/div&gt;
+&lt;div class="text-purple-dark-2"&gt;text-purple-dark-2&lt;/div&gt;
+&lt;div class="text-secondary-dark-2"&gt;text-secondary-light-2&lt;/div&gt;
+&lt;div class="text-secondary-dark-2"&gt;text-purple-light-2&lt;/div&gt;
+          </code></pre>
+        </div>
+      </div>
+    </div>
 
-    </section>
-  </main>
+
+        <!-- Font Sizes -->
+      <h2 class="mb-2 mt-3">Font Sizes</h2>
+      <p>Use <code>font-[size]</code> utility classes to adjust font sizes easily across your design.</p>
+  
+        <div class="component-preview text-black">
+          <div class="bg-gray-light-4 p-2 br-xs">
+            <div class="font-sm">this is small font</div>
+            <div class="font-md">this is medium font</div>
+            <div class="font-lg">this is large font</div>
+            <div class="font-xl">this is extra large font</div>
+            <div class="font-xxl">this is extra, extra large font</div>
+          <div>
+        </div>
+      </div>
+    
+      <div class="code-box mt-2">
+        <pre><code class="language-html">
+    &lt;div class="font-sm"&gt;this is small font&lt;/div&gt;
+    &lt;div class="font-md"&gt;this is medium font&lt;/div&gt;
+    &lt;div class="font-lg"&gt;this is large font&lt;/div&gt;
+    &lt;div class="font-xl"&gt;this is extra large font&lt;/div&gt;
+    &lt;div class="font-xxl"&gt;this is extra, extra large font&lt;/div&gt;
+        </code></pre>
+      </div>
+    </div>
+
+      <!-- Text Utilities -->
+      <h2 class="mb-2 mt-3">Text Utilities</h2>
+      <p>Apply basic typography styles like bold, italic, underline, alignment, and casing using simple utility classes.</p>
+    
+      <div class="component-preview text-black">
+        <div class="bg-gray-light-4 p-2 br-xs">
+          <p class="font-bold">This text is bold.</p>
+          <p class="font-light">This text is light.</p>
+          <p class="italic">This text is italic.</p>
+          <p class="underline">This text is underlined.</p>
+      
+          <p class="text-center bg-white p-1">This text is centered.</p>
+          <p class="text-right bg-white p-1">This text is right aligned.</p>
+          <p class="text-left bg-white p-1">This text is right aligned.</p>
+      
+          <p class="uppercase">this will be uppercase</p>
+          <p class="lowercase">THIS WILL BE LOWERCASE</p>
+          <p class="capitalize">this text will be capitalized</p>
+        <div>
+      </div>
+    </div>
+      <div class="code-box mt-2">
+        <pre><code class="language-html">
+    &lt;p class="font-bold"&gt;This text is bold.&lt;/p&gt;
+    &lt;p class="font-light"&gt;This text is light.&lt;/p&gt;
+    &lt;p class="italic"&gt;This text is italic.&lt;/p&gt;
+    &lt;p class="underline"&gt;This text is underlined.&lt;/p&gt;
+    
+    &lt;p class="text-center"&gt;This text is centered.&lt;/p&gt;
+    &lt;p class="text-right"&gt;This text is right aligned.&lt;/p&gt;
+    &lt;p class="text-right"&gt;This text is left aligned.&lt;/p&gt;
+    
+    &lt;p class="uppercase"&gt;this will be uppercase&lt;/p&gt;
+    &lt;p class="lowercase"&gt;THIS WILL BE LOWERCASE&lt;/p&gt;
+    &lt;p class="capitalize"&gt;this text will be capitalized&lt;/p&gt;
+        </code></pre>
+      </div>
+
+</section>
+
+    
+
+    <!-- Layout -->
+  <section id="layout" class="container section mt-4" style="display:none;">
+  <div class="mt-3">
+  <h2 class="mb-2">Grid System</h2>
+  <p class="component-description">
+    Create responsive layouts using <code>row</code>, <code>col-*-*</code> utility classes. Use <code>gap-*</code> for spacing and <code>justify-*</code> to align content.
+  </p>
+
+  <!-- Live Preview -->
+  <div class="component-preview">
+    <div class="row gap-2 justify-center">
+      <div >
+        <div class="card">
+          <h3 class="card-title">Hello, ninjas</h3>
+          <p class="card-body">Responsive card using grid classes.</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3 class="card-title">Responsive Layout</h3>
+          <p class="card-body">Try resizing the screen!</p>
+        </div>
+      </div>
+      <div>
+        <div class="card">
+          <h3 class="card-title">Reusable</h3>
+          <p class="card-body">Easily create column-based designs.</p>
+        </div>
+      </div>
+    </div>
+
+
+  <!-- Code Snippet -->
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="row gap-2 justify-center"&gt;
+  &lt;div&gt;
+    &lt;div class="card"&gt;
+      &lt;h3 class="card-title"&gt;Hello, ninjas&lt;/h3&gt;
+      &lt;p class="card-body"&gt;Responsive card using grid classes.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div"&gt;
+    &lt;div class="card"&gt;
+      &lt;h3 class="card-title"&gt;Responsive Layout&lt;/h3&gt;
+      &lt;p class="card-body"&gt;Try resizing the screen!&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div&gt;
+    &lt;div class="card"&gt;
+      &lt;h3 class="card-title"&gt;Reusable&lt;/h3&gt;
+      &lt;p class="card-body"&gt;Easily create column-based designs.&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+</div>
+
+<div class="mt-3">
+  <h2 class="mb-2">Breakpoints</h2>
+  <p class="component-description">
+    Use responsive breakpoint suffixes like <code>-xs</code>, <code>-sm</code>, <code>-md</code>, <code>-lg</code>, and <code>-xl</code> to control how elements behave at different screen sizes.
+    Combine with utility classes (e.g., <code>col-5-sm</code>, <code>display-n-md</code>) for adaptive layouts.
+  </p>
+
+  <!-- Live Preview -->
+  <div class="component-preview">
+    <div class="row gap-2 justify-center">
+      <div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center">Responsive 1</div>
+      <div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center">Responsive 2</div>
+      <div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center">Responsive 3</div>
+      <div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center">Responsive 4</div>
+      <div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center">Responsive 5</div>
+    </div>
+  
+
+  <!-- Code Snippet -->
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="row gap-2"&gt;
+  &lt;div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center"&gt;Responsive 1&lt;/div&gt;
+  &lt;div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center"&gt;Responsive 2&lt;/div&gt;
+  &lt;div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center"&gt;Responsive 3&lt;/div&gt;
+  &lt;div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center"&gt;Responsive 4&lt;/div&gt;
+  &lt;div class="col-12-xs col-6-sm col-4-md col-3-lg col-2-xl bg-green-light-4 p-2 br-xs text-center"&gt;Responsive 5&lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+  </div>
+</div>
+</div>
+
+<h3 class="mt-2">Available breakpoints</h3>
+<p>Bootstrap includes six default breakpoints, sometimes referred to as grid tiers, for building responsively. These breakpoints can be customized if you’re using our source Sass files.</p>
+<div class="table-container">
+  <table>
+    <thead>
+      <tr>
+        <th>Suffix</th>
+        <th>Screen Width</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>-xs</td>
+        <td>Extra small: &lt;480px</td>
+      </tr>
+      <tr>
+        <td>-sm</td>
+        <td>Small: ≥480px</td>
+      </tr>
+      <tr>
+        <td>-md</td>
+        <td>Medium: ≥720px</td>
+      </tr>
+      <tr>
+        <td>-lg</td>
+        <td>Large: ≥960px</td>
+      </tr>
+      <tr>
+        <td>-xl</td>
+        <td>Extra large: ≥1200px</td>
+      </tr>
+    </tbody>
+  </table>
+</div>
+
+<!-- Box Sizing -->
+<h2 class="mb-2 mt-3">Box Sizing</h2>
+<p>
+  Control how an element's total width and height are calculated using <code>box-border</code> and <code>box-content</code> utility classes.
+</p>
+
+<div class="component-preview ">
+<div class="bg-gray-light-4 p-3 br-xs ">
+  <div class="box-border w-24 p-2 bg-blue text-white">
+    <strong>box-border</strong>
+    <br>
+    Includes padding & border in width
+  </div>
+  <br>
+
+  <div class="box-content w-24 p-2 bg-green text-white ">
+    <strong>box-content</strong>
+    <br>
+    Excludes padding & border in width
+  </div>
+</div>
+
+<div class="code-box mt-2">
+  <pre><code class="language-html">
+&lt;!-- box-border example --&gt;
+&lt;div class="box-border p-2 bg-blue text-white" style="width: 150px; border: 4px solid #fff;"&gt;
+&lt;strong&gt;box-border&lt;/strong&gt;&lt;br&gt;
+Includes padding &amp; border in width
+&lt;/div&gt;
+
+&lt;!-- box-content example --&gt;
+&lt;div class="box-content p-2 bg-green text-white" style="width: 150px; border: 4px solid #fff;"&gt;
+&lt;strong&gt;box-content&lt;/strong&gt;&lt;br&gt;
+Excludes padding &amp; border in width
+&lt;/div&gt;
+  </code></pre>
+</div>
+</div>
+
+
+
+<div class="mt-3">
+  <h2 class="mb-2">Display</h2>
+  <p class="component-description">Control the rendering behavior of elements using <code>display-*</code> utility classes.</p>
+
+  <div class="component-preview">
+    <!-- Inline Display -->
+    <div class="bg-green-light-4 p-2 br-xs mb-2">
+      <span class="display-i ">display-i</span>
+      <span class="display-i text-white">display-i</span>
+    </div>
+
+    <div class="code-box mt-2">
+      <pre><code class="language-html">
+&lt;!-- Inline Display --&gt;
+&lt;span class="display-i text-dark"&gt;display-i&lt;/span&gt;
+&lt;span class="display-i text-white"&gt;display-i&lt;/span&gt;
+      </code></pre>
+</div>
+  
+
+    <!-- Block Display -->
+    <div class="bg-green-light-2 p-2 br-xs mt-2 mb-2">
+      <span class="display-b bg-warning text-dark p-1 br-xs">display-b</span>
+      <span class="display-b bg-danger text-white p-1 br-xs">display-b</span>
+    </div>
+
+    <div class="code-box mt-2">
+      <pre><code class="language-html">
+&lt;!-- Block Display --&gt;
+&lt;span class="display-b bg-warning text-dark p-1 br-xs"&gt;display-b&lt;/span&gt;
+&lt;span class="display-b bg-danger text-white p-1 br-xs"&gt;display-b&lt;/span&gt;              
+      </code></pre>
+    </div>
+
+    <!-- Inline-block Display -->
+    <div class="bg-green-light-2 p-2 br-xs mt-2 mb-2">
+      <span class="display-i-b bg-warning text-dark p-1 br-xs">display-i-b</span>
+      <span class="display-i-b bg-danger text-white p-1 br-xs">display-i-b</span>
+    </div>
+
+    <div class="code-box mt-2">
+      <pre><code class="language-html">
+&lt;!-- Inline-block Display --&gt;
+&lt;span class="display-i-b bg-warning text-dark p-1 br-xs"&gt;display-i-b&lt;/span&gt;
+&lt;span class="display-i-b bg-danger text-white p-1 br-xs"&gt;display-i-b&lt;/span&gt;              
+      </code></pre>
+    </div>
+
+ <!-- Flex Display -->
+ <div class="display-f bg-green-light-2 p-2 br-xs mt-2 mb-2">
+  <div class="bg-secondary text-white p-2 br-xs">Flex 1</div>
+  <div class="bg-success text-white p-2 br-xs">Flex 2</div>
+  <div class="bg-primary text-white p-2 br-xs">Flex 3</div>
+</div>
+
+<div class="code-box mt-2">
+  <pre><code class="language-html">
+&lt;!-- Flex Display --&gt;
+&lt;div class="display-f bg-green-light-2 p-2 br-xs"&gt;
+&lt;div class="bg-secondary text-white p-2 br-xs"&gt;Flex 1&lt;/div&gt;
+&lt;div class="bg-success text-white p-2 br-xs"&gt;Flex 2&lt;/div&gt;
+&lt;div class="bg-primary text-white p-2 br-xs"&gt;Flex 3&lt;/div&gt;
+&lt;/div&gt;
+  </code></pre>
+</div>
+</div>
+
+<!-- Float Utilities -->
+<h2 class="mt-4">Float Utilities</h2>
+<p class="mt-2">The float property in CSS is used to push an element to the left or right of its container, allowing text and inline elements to wrap around it.</p>
+<div class="component-preview ">
+<div class="bg-gray p-2 br-xs mt-2 mb-2">
+  <div class="float-left bg-warning text-dark p-1 br-xs w-10">float-left</div>
+  <div class="float-right bg-danger text-white p-1 br-xs w-10">float-right</div>
+  <div class="float-none bg-primary text-white p-1 br-xs w-10 mt-4 clear-both">float-none</div>
+</div>
+
+<div class="code-box mt-2">
+  <pre><code class="language-html">
+&lt;!-- Float Utilities --&gt;
+&lt;div class="float-left bg-warning text-dark p-1 br-xs w-10"&gt;float-left&lt;/div&gt;
+&lt;div class="float-right bg-danger text-white p-1 br-xs w-10"&gt;float-right&lt;/div&gt;
+&lt;div class="float-none bg-primary text-white p-1 br-xs w-10 mt-4 clear-both"&gt;float-none&lt;/div&gt;
+  </code></pre>
+</div>
+</div>
+
+
+<!-- Position -->
+<!-- Position -->
+<h3 class="mt-3">Position</h3>
+
+<div class="component-preview">
+
+  <!-- Static -->
+  <h4>static</h4>
+  <p><code>static</code> is the default position for HTML elements. They appear in the normal document flow and aren't affected by <code>top</code>, <code>left</code>, <code>bottom</code>, or <code>right</code>.</p>
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="position-static"&gt;
+  Static position (default, no offset)
+&lt;/div&gt;
+    </code></pre>
+  </div>
+
+  <!-- Relative -->
+  <h4 class="mt-3">relative</h4>
+  <p><code>relative</code> positions the element relative to its normal position. You can offset it using <code>top</code>, <code>left</code>, etc.</p>
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="position-relative"&gt;
+  Relative position
+&lt;/div&gt;
+    </code></pre>
+  </div>
+
+  <!-- Absolute -->
+  <h4 class="mt-3">absolute</h4>
+  <p><code>absolute</code> positions the element relative to the nearest ancestor with a positioned context. It is removed from the normal document flow.</p>
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="position-relative"&gt;
+  &lt;div class="position-absolute"&gt;
+    Absolute inside relative
+  &lt;/div&gt;
+&lt;/div&gt;
+    </code></pre>
+  </div>
+
+  <!-- Fixed -->
+  <h4 class="mt-3">fixed</h4>
+  <p><code>fixed</code> positions the element relative to the viewport. It remains in the same place even during scroll.</p>
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="position-fixed"&gt;
+  Fixed element
+&lt;/div&gt;
+    </code></pre>
+  </div>
+
+  <!-- Sticky -->
+  <h4 class="mt-3">sticky</h4>
+  <p><code>sticky</code> acts like <code>relative</code> until the element crosses a certain scroll threshold, then it behaves like <code>fixed</code>.</p>
+  <div class="code-box mt-2">
+    <pre><code class="language-html">
+&lt;div class="position-sticky"&gt;
+  Sticky element
+&lt;/div&gt;
+    </code></pre>
+  </div>
+
+</div>
+
+</section>
+    
   <!-- Footer -->
   <footer id="footer" class="p-4 mt-4 text-center">
-    <p>© 2025 MythicalUI – Built with ❤️</p>
+    <p>© 2025 MythicalUI - Built by tHE mYthiCal coDeRs </p>
     <a target="_blank" href=https://github.com/gauravsinghshah/Mythical-UI>Github</a>
   </footer>
 
