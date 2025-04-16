@@ -1,4 +1,4 @@
-@use "sass:map"; // Import the map module
+@use "sass:map";
 
 $breakpoints: (
   "xs": 0,
@@ -8,38 +8,34 @@ $breakpoints: (
   "xl": 1200px,
 );
 
+// MythicalUI/_breakpoints.scss
+
 @mixin xs {
-  @media (min-width: map.get($breakpoints, "xs")) { // Use map.get
+  @media (min-width: 0px) {
     @content;
   }
 }
 
 @mixin sm {
-  @media (min-width: map.get($breakpoints, "sm")) { // Use map.get
+  @media (min-width: 576px) {
     @content;
   }
 }
 
 @mixin md {
-  @media (min-width: map.get($breakpoints, "md")) { // Use map.get
+  @media (min-width: 768px) {
     @content;
   }
 }
 
 @mixin lg {
-  @media (min-width: map.get($breakpoints, "lg")) { // Use map.get
+  @media (min-width: 992px) {
     @content;
   }
 }
 
 @mixin xl {
-  @media (min-width: map.get($breakpoints, "xl")) { // Use map.get
-    @content;
-  }
-}
-
-@mixin breakpoint($bp: 0) {
-  @media (min-width: $bp) {
+  @media (min-width: 1200px) {
     @content;
   }
 }

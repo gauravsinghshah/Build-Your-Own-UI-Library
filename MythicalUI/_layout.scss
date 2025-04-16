@@ -29,3 +29,41 @@ footer {
   text-align: center;
   padding: 20px;
 }
+
+// Box Sizing Utilities
+.box-border {
+  box-sizing: border-box;
+}
+
+.box-content {
+  box-sizing: content-box;
+}
+
+
+// _float.scss
+.float-right {
+  float: right;
+}
+
+.float-left {
+  float: left;
+}
+
+.float-start {
+  float: inline-start;
+}
+
+.float-end {
+  float: inline-end;
+}
+
+.float-none {
+  float: none;
+}
+
+// Position Utilities
+.position-static   { position: static; }
+.position-fixed    { position: fixed; }
+.position-absolute { position: absolute; }
+.position-relative { position: relative; }
+.position-sticky   { position: sticky; }

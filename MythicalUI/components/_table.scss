@@ -1,0 +1,22 @@
+/* Center the table horizontally and add some styling */
+.table-container {
+  display: flex;
+  justify-content: center;
+
+}
+
+table {
+  width: 50%; /* Adjust the width as needed */
+  border-collapse: collapse; /* Removes extra space between cells */
+  margin-top: 20px; /* Adds some margin at the top */
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ccc; /* Adds borders to table cells */
+}
+
+th {
+  background-color: #f4f4f4; /* Adds a background color to header */
+}

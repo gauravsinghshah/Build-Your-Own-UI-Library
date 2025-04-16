@@ -38,6 +38,31 @@ $base-box-shadow: 1px 3px 5px rgba(0,0,0,0.1) !default;
 // font sizes
 $base-font-size: 1rem !default;
 $font-size-sm: $base-font-size * 0.75 !default;
+$font-size-md: $base-font-size * 1.1 !default;
 $font-size-lg: $base-font-size * 1.5 !default;
 $font-size-xl: $base-font-size * 2 !default;
 $font-size-xxl: $base-font-size * 3 !default;
+
+// Width Utility Classes
+$width-scale: (
+  1: 0.25rem,
+  2: 0.5rem,
+  4: 1rem,
+  6: 1.5rem,
+  8: 2rem,
+  10: 2.5rem,
+  12: 3rem,
+  16: 4rem,
+  20: 5rem,
+  24: 6rem,
+  32: 8rem,
+  40: 10rem,
+  48: 12rem,
+  64: 16rem
+);
+
+@each $key, $val in $width-scale {
+  .w-#{$key} {
+    width: $val;
+  }
+}
