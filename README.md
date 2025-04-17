@@ -1,7 +1,6 @@
 # Mythical-UI-Library
 
-YourUI is a modern CSS utility framework built from scratch to empower developers with the tools they need to create **beautiful**, **responsive**, and **accessible** interfaces. This library redefines what a UI framework can be—balancing **visual sophistication** with **functional precision**.
-
+MythicalUI is a powerful, extensible, and modern frontend framework. Build sleek, responsive interfaces with our utility-first classes, modular components, and Sass-powered customization.
 ---
 
 ## 🚀 Features
@@ -29,7 +28,7 @@ YourUI is a modern CSS utility framework built from scratch to empower developer
   - Example: `text-center`, `bg-primary`, `grid-col-6`
 
 - **🌐 Live Demo**
-  - Check out the [Live Demo Site](https://your-ui-demo-site.com) showcasing real-world use cases and components.
+  - Check out the [Live Demo Site](https://mythicalui.vercel.app/) showcasing real-world use cases and components.
 
 ---
 
@@ -51,7 +50,14 @@ YourUI is a modern CSS utility framework built from scratch to empower developer
 
 ## 🛠 Getting Started
 
-### 1. Install via CDN
+### 1. Install npm Package
+
+```Terminal
+npm i mythui
+```
+
+### 2. Link the CSS File in Your HTML
 
 ```html
-<link rel="stylesheet" href="https://cdn.your-ui-library.com/yourui.min.css">
+<link rel="stylesheet" href="node_modules/mythui/css/index.css"/>
+```
